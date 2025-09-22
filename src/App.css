@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* SalesGym AI Color Palette */
+  --radius: 0.625rem;
+  --background: #0F172A; /* Dark Background */
+  --foreground: #F3F4F6; /* Light Text */
+  --card: #1E293B; /* Slightly Lighter Background */
+  --card-foreground: #F3F4F6; /* Light Text */
+  --popover: #1E293B; /* Slightly Lighter Background */
+  --popover-foreground: #F3F4F6; /* Light Text */
+  --primary: #2563EB; /* Primary Blue */
+  --primary-foreground: #F3F4F6; /* Light Text */
+  --secondary: #7C3AED; /* Electric Violet */
+  --secondary-foreground: #F3F4F6; /* Light Text */
+  --muted: #334155; /* Muted Background */
+  --muted-foreground: #94A3B8; /* Muted Text */
+  --accent: #38BDF8; /* Aqua Blue */
+  --accent-foreground: #0F172A; /* Dark Text */
+  --destructive: #EF4444; /* Red */
+  --border: #334155; /* Border Color */
+  --input: #334155; /* Input Background */
+  --ring: #2563EB; /* Primary Blue */
+  --chart-1: #2563EB; /* Primary Blue */
+  --chart-2: #7C3AED; /* Electric Violet */
+  --chart-3: #FB923C; /* Warm Orange */
+  --chart-4: #38BDF8; /* Aqua Blue */
+  --chart-5: #FACC15; /* Accent Yellow */
+  --sidebar: #0F172A; /* Dark Background */
+  --sidebar-foreground: #F3F4F6; /* Light Text */
+  --sidebar-primary: #2563EB; /* Primary Blue */
+  --sidebar-primary-foreground: #F3F4F6; /* Light Text */
+  --sidebar-accent: #7C3AED; /* Electric Violet */
+  --sidebar-accent-foreground: #F3F4F6; /* Light Text */
+  --sidebar-border: #334155; /* Border Color */
+  --sidebar-ring: #2563EB; /* Primary Blue */
+}
+
+.light {
+  --background: #F3F4F6; /* Light Background */
+  --foreground: #0F172A; /* Dark Text */
+  --card: #FFFFFF; /* White Card */
+  --card-foreground: #0F172A; /* Dark Text */
+  --popover: #FFFFFF; /* White Popover */
+  --popover-foreground: #0F172A; /* Dark Text */
+  --primary: #2563EB; /* Primary Blue */
+  --primary-foreground: #FFFFFF; /* White Text */
+  --secondary: #7C3AED; /* Electric Violet */
+  --secondary-foreground: #FFFFFF; /* White Text */
+  --muted: #F1F5F9; /* Muted Background */
+  --muted-foreground: #64748B; /* Muted Text */
+  --accent: #38BDF8; /* Aqua Blue */
+  --accent-foreground: #0F172A; /* Dark Text */
+  --destructive: #EF4444; /* Red */
+  --border: #E2E8F0; /* Border Color */
+  --input: #E2E8F0; /* Input Background */
+  --ring: #2563EB; /* Primary Blue */
+  --chart-1: #2563EB; /* Primary Blue */
+  --chart-2: #7C3AED; /* Electric Violet */
+  --chart-3: #FB923C; /* Warm Orange */
+  --chart-4: #38BDF8; /* Aqua Blue */
+  --chart-5: #FACC15; /* Accent Yellow */
+  --sidebar: #0F172A; /* Dark Background */
+  --sidebar-foreground: #F3F4F6; /* Light Text */
+  --sidebar-primary: #2563EB; /* Primary Blue */
+  --sidebar-primary-foreground: #F3F4F6; /* Light Text */
+  --sidebar-accent: #7C3AED; /* Electric Violet */
+  --sidebar-accent-foreground: #F3F4F6; /* Light Text */
+  --sidebar-border: #334155; /* Border Color */
+  --sidebar-ring: #2563EB; /* Primary Blue */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* SalesGym AI Custom Styles */
+.gradient-blue-violet {
+  background: linear-gradient(90deg, #2563EB, #7C3AED);
+}
+
+.gradient-blue-aqua {
+  background: linear-gradient(90deg, #38BDF8, #9333EA);
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.robot-shadow {
+  filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.2));
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation Classes */
+.bounce-in {
+  animation: bounce-in 0.5s ease;
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slide-up 0.5s ease;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
